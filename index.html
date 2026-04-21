@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model X Plaid Warranty Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background: #000; color: #fff; }
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1617704518625-131707559132?q=80&w=2000'); 
+            background-size: cover; background-position: center; 
+        }
+    </style>
+</head>
+<body class="p-0 m-0">
+
+    <section class="hero min-h-[60vh] flex flex-col justify-center items-center text-center p-6">
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-4">Model X Plaid <span class="text-gray-500">Warranty</span></h1>
+        <p class="text-xl text-gray-300 max-w-2xl">大佬嘅朋友個架 2022 Tesla Model X Plaid，過咗保養值得買 $150/月 嘅延保嗎？</p>
+    </section>
+
+    <div class="max-w-4xl mx-auto p-6 -mt-20">
+        <div class="bg-white text-black p-8 rounded-3xl shadow-2xl">
+            <h2 class="text-2xl font-bold mb-6">五年持有成本推算 (2025-2030)</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <canvas id="costChart"></canvas>
+                </div>
+                <div class="space-y-4">
+                    <div class="p-4 bg-gray-100 rounded-xl">
+                        <p class="text-sm text-gray-600">五年延保總費用</p>
+                        <p class="text-2xl font-bold">$9,000</p>
+                    </div>
+                    <div class="p-4 bg-gray-100 rounded-xl">
+                        <p class="text-sm text-gray-600">預期維修 (中位數)</p>
+                        <p class="text-2xl font-bold">$6,000</p>
+                    </div>
+                    <p class="text-sm text-gray-500 italic">結論：如果架車無出現 Falcon Wing Door 電路、空氣懸掛或者 MCU 大故障，延保其實係買個「心安理得」。</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="mt-12 text-center text-gray-400">
+            <h3 class="text-xl font-semibold text-white mb-4">Model X Plaid 常見高開銷項目</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="p-4 border border-gray-800 rounded-xl">空氣懸掛系統</div>
+                <div class="p-4 border border-gray-800 rounded-xl">Falcon Wing 感應器</div>
+                <div class="p-4 border border-gray-800 rounded-xl">MCU 電腦模組</div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('costChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['低維修 (Low)', '中維修 (Mid)', '高維修 (High)', '延保費用'],
+                datasets: [{
+                    label: 'USD ($)',
+                    data: [2500, 6000, 12000, 9000],
+                    backgroundColor: ['#e5e7eb', '#9ca3af', '#6b7280', '#000']
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
