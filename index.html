@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Model X Plaid Warranty Analysis</title>
+    <title>Model X Plaid Warranty | Deep Analysis</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; background: #000; color: #fff; }
         .hero { 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), 
                         url('https://images.unsplash.com/photo-1617704518625-131707559132?q=80&w=2000'); 
             background-size: cover; background-position: center; 
         }
@@ -18,38 +18,48 @@
 </head>
 <body class="p-0 m-0">
 
-    <section class="hero min-h-[60vh] flex flex-col justify-center items-center text-center p-6">
-        <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-4">Model X Plaid <span class="text-gray-500">Warranty</span></h1>
-        <p class="text-xl text-gray-300 max-w-2xl">大佬嘅朋友個架 2022 Tesla Model X Plaid，過咗保養值得買 $150/月 嘅延保嗎？</p>
+    <section class="hero min-h-[50vh] flex flex-col justify-center items-center text-center p-6 bg-cover bg-center">
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4">Model X Plaid 保養決策分析</h1>
+        <p class="text-lg text-gray-200">過保後延長保養 ($150/月) 究竟值唔值？</p>
     </section>
 
-    <div class="max-w-4xl mx-auto p-6 -mt-20">
-        <div class="bg-white text-black p-8 rounded-3xl shadow-2xl">
-            <h2 class="text-2xl font-bold mb-6">五年持有成本推算 (2025-2030)</h2>
+    <div class="max-w-4xl mx-auto p-6 -mt-16">
+        <div class="bg-white text-black p-8 rounded-3xl shadow-2xl mb-8">
+            <h2 class="text-2xl font-bold mb-6">成本效益深層分析</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div>
+                    <h3 class="font-bold mb-4">數據比較</h3>
                     <canvas id="costChart"></canvas>
                 </div>
                 <div class="space-y-4">
-                    <div class="p-4 bg-gray-100 rounded-xl">
-                        <p class="text-sm text-gray-600">五年延保總費用</p>
-                        <p class="text-2xl font-bold">$9,000</p>
+                    <div class="border-l-4 border-black pl-4">
+                        <p class="text-sm text-gray-500">延保總成本 (5年)</p>
+                        <p class="text-xl font-bold">$9,000 USD</p>
                     </div>
-                    <div class="p-4 bg-gray-100 rounded-xl">
-                        <p class="text-sm text-gray-600">預期維修 (中位數)</p>
-                        <p class="text-2xl font-bold">$6,000</p>
+                    <div class="text-sm text-gray-700 leading-relaxed">
+                        <p class="mb-2"><strong>心態分析：</strong> $9,000 係買一個「免除維修壓力」嘅保險。Model X Plaid 結構複雜，一旦空氣避震失效 (常見) 或 Falcon Wing 系統失靈，維修費用隨時超過 $4,000。</p>
+                        <p><strong>建議：</strong> 如果架車會揸多五年而且你想完全唔洗擔心維修費，呢 $150/月 係合理嘅「雜費」。如果閣下有預留 $5,000 作為「維修儲備金」，其實留錢喺手靈活過俾 Tesla。</p>
                     </div>
-                    <p class="text-sm text-gray-500 italic">結論：如果架車無出現 Falcon Wing Door 電路、空氣懸掛或者 MCU 大故障，延保其實係買個「心安理得」。</p>
                 </div>
             </div>
         </div>
 
-        <section class="mt-12 text-center text-gray-400">
-            <h3 class="text-xl font-semibold text-white mb-4">Model X Plaid 常見高開銷項目</h3>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="p-4 border border-gray-800 rounded-xl">空氣懸掛系統</div>
-                <div class="p-4 border border-gray-800 rounded-xl">Falcon Wing 感應器</div>
-                <div class="p-4 border border-gray-800 rounded-xl">MCU 電腦模組</div>
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-gray-900 p-6 rounded-2xl text-white">
+                <h3 class="text-lg font-bold mb-4">最常見/昂貴維修項目</h3>
+                <ul class="text-sm text-gray-300 space-y-3">
+                    <li>🔹 <strong>空氣懸掛系統 (Air Suspension):</strong> 最常見過保損壞，更換費用約 $2,500-$4,500。</li>
+                    <li>🔹 <strong>Falcon Wing Doors (FWD):</strong> 複雜感應器及馬達，維修極貴，$1,500-$3,000。</li>
+                    <li>🔹 <strong>MCU (車機顯示屏):</strong> Plaid 版本晶片若過熱故障，更換整機約 $2,000+。</li>
+                </ul>
+            </div>
+            <div class="bg-gray-900 p-6 rounded-2xl text-white">
+                <h3 class="text-lg font-bold mb-4">揸多五年折舊預測</h3>
+                <ul class="text-sm text-gray-300 space-y-3">
+                    <li>• Model X 屬於高價值車款，折舊率較 SUV 重。</li>
+                    <li>• 五年後，即使有延保，車價亦會隨電續航力遞減。</li>
+                    <li>• 延保計劃對賣車時有無吸引力：<strong>一般</strong> (車行通常唔會多俾錢因為保養跟車不跟人)。</li>
+                </ul>
             </div>
         </section>
     </div>
@@ -59,11 +69,11 @@
         new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['低維修 (Low)', '中維修 (Mid)', '高維修 (High)', '延保費用'],
+                labels: ['低風險維修', '預期維修', '高風險維修', '延保成本'],
                 datasets: [{
                     label: 'USD ($)',
                     data: [2500, 6000, 12000, 9000],
-                    backgroundColor: ['#e5e7eb', '#9ca3af', '#6b7280', '#000']
+                    backgroundColor: ['#e5e7eb', '#9ca3af', '#6b7280', '#000000']
                 }]
             }
         });
