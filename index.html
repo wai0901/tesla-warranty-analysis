@@ -9,18 +9,26 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; background: #000; color: #fff; }
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1617704518625-131707559132?q=80&w=2000'); 
-            background-size: cover; background-position: center; 
+        .hero-banner { 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1617704518625-131707559132?q=80&w=2000');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
     </style>
 </head>
 <body class="p-0 m-0">
 
-    <section class="hero min-h-[50vh] flex flex-col justify-center items-center text-center p-6 bg-cover bg-center">
-        <h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4">Model X Plaid 保養決策分析</h1>
-        <p class="text-lg text-gray-200">過保後延長保養 ($150/月) 究竟值唔值？</p>
+    <section class="hero-banner p-6">
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4 shadow-lg">Model X Plaid 保養決策分析</h1>
+        <p class="text-lg text-white font-medium bg-black/30 px-4 py-1 rounded">過保後延長保養 ($150/月) 究竟值唔值？</p>
     </section>
 
     <div class="max-w-4xl mx-auto p-6 -mt-16">
@@ -38,7 +46,7 @@
                     </div>
                     <div class="text-sm text-gray-700 leading-relaxed">
                         <p class="mb-2"><strong>心態分析：</strong> $9,000 係買一個「免除維修壓力」嘅保險。Model X Plaid 結構複雜，一旦空氣避震失效 (常見) 或 Falcon Wing 系統失靈，維修費用隨時超過 $4,000。</p>
-                        <p><strong>建議：</strong> 如果架車會揸多五年而且你想完全唔洗擔心維修費，呢 $150/月 係合理嘅「雜費」。如果閣下有預留 $5,000 作為「維修儲備金」，其實留錢喺手靈活過俾 Tesla。</p>
+                        <p><strong>建議：</strong> 如果閣下有預留 $5,000 作為「維修儲備金」，其實留錢喺手靈活過俾 Tesla。</p>
                     </div>
                 </div>
             </div>
@@ -48,9 +56,9 @@
             <div class="bg-gray-900 p-6 rounded-2xl text-white">
                 <h3 class="text-lg font-bold mb-4">最常見/昂貴維修項目</h3>
                 <ul class="text-sm text-gray-300 space-y-3">
-                    <li>🔹 <strong>空氣懸掛系統 (Air Suspension):</strong> 最常見過保損壞，更換費用約 $2,500-$4,500。</li>
-                    <li>🔹 <strong>Falcon Wing Doors (FWD):</strong> 複雜感應器及馬達，維修極貴，$1,500-$3,000。</li>
-                    <li>🔹 <strong>MCU (車機顯示屏):</strong> Plaid 版本晶片若過熱故障，更換整機約 $2,000+。</li>
+                    <li>🔹 <strong>空氣懸掛系統 (Air Suspension):</strong> 最常見過保損壞，$2,500-$4,500。</li>
+                    <li>🔹 <strong>Falcon Wing Doors (FWD):</strong> 複雜感應器及馬達，$1,500-$3,000。</li>
+                    <li>🔹 <strong>MCU (車機顯示屏):</strong> 晶片過熱故障，$2,000+。</li>
                 </ul>
             </div>
             <div class="bg-gray-900 p-6 rounded-2xl text-white">
@@ -58,7 +66,7 @@
                 <ul class="text-sm text-gray-300 space-y-3">
                     <li>• Model X 屬於高價值車款，折舊率較 SUV 重。</li>
                     <li>• 五年後，即使有延保，車價亦會隨電續航力遞減。</li>
-                    <li>• 延保計劃對賣車時有無吸引力：<strong>一般</strong> (車行通常唔會多俾錢因為保養跟車不跟人)。</li>
+                    <li>• 建議：如果不打算賣車，關注電池健康度比延保更重要。</li>
                 </ul>
             </div>
         </section>
