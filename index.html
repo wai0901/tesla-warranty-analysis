@@ -9,52 +9,53 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; background: #000; color: #fff; }
-        .hero-banner {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #222;
-        }
-        .hero-banner img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.6);
-        }
-        .hero-text {
-            position: absolute;
-            z-index: 10;
-        }
     </style>
 </head>
-<body class="p-0 m-0">
+<body class="bg-black text-white">
 
-    <section class="hero-banner">
-        <img src="https://images.unsplash.com/photo-1617704518625-131707559132?q=80&w=2000" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617704518625-131707559132?q=80&w=2000';" alt="Tesla Model X Plaid">
-        <div class="hero-text p-6 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4 shadow-lg">Model X Plaid 保養決策分析</h1>
-            <p class="text-lg text-white font-medium bg-black/30 backdrop-blur-sm px-4 py-1 rounded inline-block">過保後延長保養 ($150/月) 究竟值唔值？</p>
+    <!-- Hero Section -->
+    <div class="relative w-full h-[400px]">
+        <img src="https://www.tesla.com/sites/default/files/images/modelx-hero-desktop.jpg" class="w-full h-full object-cover opacity-60">
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4 shadow-xl">Model X Plaid 保養決策分析</h1>
+            <p class="text-lg bg-black/50 px-4 py-2 rounded-lg">過保後延長保養 ($150/月) 究竟值唔值？</p>
         </div>
-    </section>
+    </div>
 
-    <div class="max-w-4xl mx-auto p-6 -mt-16">
-        <div class="bg-white text-black p-8 rounded-3xl shadow-2xl mb-8">
-            <h2 class="text-2xl font-bold mb-6">成本效益深層分析</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="font-bold mb-4">數據比較</h3>
-                    <canvas id="costChart"></canvas>
-                </div>
-                <div class="space-y-4">
-                    <div class="border-l-4 border-black pl-4">
-                        <p class="text-sm text-gray-500">延保總成本 (5年)</p>
-                        <p class="text-xl font-bold">$9,000 USD</p>
+    <!-- Content Section -->
+    <div class="max-w-4xl mx-auto p-6 -mt-16 relative z-10">
+        <div class="bg-white text-black p-8 rounded-3xl shadow-2xl mb-12">
+            <h2 class="text-3xl font-bold mb-8">成本效益深層分析</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <canvas id="costChart" class="w-full"></canvas>
+                <div class="space-y-6">
+                    <div class="border-l-4 border-black pl-6">
+                        <p class="text-sm text-gray-500 font-bold uppercase tracking-widest">延保總成本 (5年)</p>
+                        <p class="text-4xl font-black">$9,000 USD</p>
                     </div>
+                    <p class="text-sm text-gray-700 leading-relaxed italic">
+                        每個月 $150 係買個「心安」。大佬，如果架車過 2022 年 Plaid 結構複雜，防護系統失效隨時維修過四千，九千蚊五年其實算買到個保險。
+                    </p>
                 </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-20">
+            <div class="bg-zinc-900 p-8 rounded-3xl text-white">
+                <h3 class="text-xl font-bold mb-6">高開銷維修項目</h3>
+                <ul class="space-y-4 text-gray-300">
+                    <li class="flex gap-3"><span>🔹</span>空氣懸掛系統 (Air Suspension): $2,500-$4,500</li>
+                    <li class="flex gap-3"><span>🔹</span>Falcon Wing Doors: $1,500-$3,000</li>
+                    <li class="flex gap-3"><span>🔹</span>MCU 電腦模組: $2,000+</li>
+                </ul>
+            </div>
+            <div class="bg-zinc-900 p-8 rounded-3xl text-white">
+                <h3 class="text-xl font-bold mb-6">五年揸車總結</h3>
+                <ul class="space-y-4 text-gray-300">
+                    <li>• 折舊率始終係最大開支，保養計劃影響賣價有限。</li>
+                    <li>• 若有閒錢，留 $5,000 做維修基金亦係好選擇。</li>
+                    <li>• 車況重要過保養單據。</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -64,11 +65,11 @@
         new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['低風險維修', '預期維修', '高風險維修', '延保成本'],
+                labels: ['低風險', '預期', '高風險', '延保成本'],
                 datasets: [{
                     label: 'USD ($)',
                     data: [2500, 6000, 12000, 9000],
-                    backgroundColor: ['#e5e7eb', '#9ca3af', '#6b7280', '#000000']
+                    backgroundColor: ['#d1d5db', '#9ca3af', '#4b5563', '#000000']
                 }]
             }
         });
