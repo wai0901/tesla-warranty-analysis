@@ -9,26 +9,41 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; background: #000; color: #fff; }
-        .hero-banner { 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('https://images.unsplash.com/photo-1617704518625-131707559132?q=80&w=2000');
-            background-size: cover; 
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 400px;
+        .hero-container {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
         }
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            filter: brightness(0.6);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
     </style>
 </head>
 <body class="p-0 m-0">
 
-    <section class="hero-banner p-6">
-        <h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4 shadow-lg">Model X Plaid 保養決策分析</h1>
-        <p class="text-lg text-white font-medium bg-black/30 px-4 py-1 rounded">過保後延長保養 ($150/月) 究竟值唔值？</p>
+    <section class="hero-container">
+        <img src="https://images.unsplash.com/photo-1617704518625-131707559132?q=80&w=2000" alt="Black Model X Plaid" class="hero-image">
+        <div class="hero-content p-6">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4 shadow-lg">Model X Plaid 保養決策分析</h1>
+            <p class="text-lg text-white font-medium bg-black/30 backdrop-blur-sm px-4 py-1 rounded inline-block">過保後延長保養 ($150/月) 究竟值唔值？</p>
+        </div>
     </section>
 
     <div class="max-w-4xl mx-auto p-6 -mt-16">
@@ -45,28 +60,28 @@
                         <p class="text-xl font-bold">$9,000 USD</p>
                     </div>
                     <div class="text-sm text-gray-700 leading-relaxed">
-                        <p class="mb-2"><strong>心態分析：</strong> $9,000 係買一個「免除維修壓力」嘅保險。Model X Plaid 結構複雜，一旦空氣避震失效 (常見) 或 Falcon Wing 系統失靈，維修費用隨時超過 $4,000。</p>
-                        <p><strong>建議：</strong> 如果閣下有預留 $5,000 作為「維修儲備金」，其實留錢喺手靈活過俾 Tesla。</p>
+                        <p class="mb-2"><strong>心態分析：</strong> $9,000 係買一個「免除維修壓力」嘅保險。Model X Plaid 結構複雜，一旦空氣懸掛失效或 Falcon Wing 系統失靈，維修隨時過 $4,000。</p>
+                        <p><strong>建議：</strong> 如果手頭鬆動，呢 $150/月 係買個「心安理得」。</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <div class="bg-gray-900 p-6 rounded-2xl text-white">
                 <h3 class="text-lg font-bold mb-4">最常見/昂貴維修項目</h3>
                 <ul class="text-sm text-gray-300 space-y-3">
-                    <li>🔹 <strong>空氣懸掛系統 (Air Suspension):</strong> 最常見過保損壞，$2,500-$4,500。</li>
-                    <li>🔹 <strong>Falcon Wing Doors (FWD):</strong> 複雜感應器及馬達，$1,500-$3,000。</li>
-                    <li>🔹 <strong>MCU (車機顯示屏):</strong> 晶片過熱故障，$2,000+。</li>
+                    <li>🔹 <strong>空氣懸掛系統:</strong> 最常見過保損壞，$2,500-$4,500。</li>
+                    <li>🔹 <strong>Falcon Wing Doors:</strong> 複雜感應器及馬達，$1,500-$3,000。</li>
+                    <li>🔹 <strong>MCU 電腦:</strong> 晶片過熱故障，$2,000+。</li>
                 </ul>
             </div>
             <div class="bg-gray-900 p-6 rounded-2xl text-white">
                 <h3 class="text-lg font-bold mb-4">揸多五年折舊預測</h3>
                 <ul class="text-sm text-gray-300 space-y-3">
                     <li>• Model X 屬於高價值車款，折舊率較 SUV 重。</li>
-                    <li>• 五年後，即使有延保，車價亦會隨電續航力遞減。</li>
-                    <li>• 建議：如果不打算賣車，關注電池健康度比延保更重要。</li>
+                    <li>• Five-year horizon: 車價亦會隨電續航力遞減。</li>
+                    <li>• 建議：如果不打算賣車，電池健康度比延保更重要。</li>
                 </ul>
             </div>
         </section>
