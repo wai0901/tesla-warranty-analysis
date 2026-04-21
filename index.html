@@ -9,72 +9,62 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; background: #000; color: #fff; }
-        .hero-section {
-            position: relative;
-            width: 100%;
-            height: 420px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-color: #050505;
-        }
-        .hero-section img {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            object-fit: cover;
-            filter: brightness(0.4);
-        }
     </style>
 </head>
-<body class="p-0 m-0">
+<body class="bg-black text-white">
 
-    <!-- Hero Section with Embedded SVG Image -->
-    <section class="hero-section">
-        <img src="data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjE2MDAiIGhlaWdodD0iOTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAwIDkwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImcxIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxMTEiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjIyIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMGYiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJnbG93IiBjeD0iNTAlIiBjeT0iNTAlIiByPSI1MCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZTUyZTJlIiBzdG9wLW9wYWNpdHk9IjAuMTUiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMCIgc3RvcC1vcGFjaXR5PSIwIiAvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9InNoYWRvdyI+CiAgICAgIDxmZURyb3BTaGFkb3cgZHg9IjAiIGR5PSIxMCIgc3RkRGV2aWF0aW9uPSIyMCIgZmxvb2QtY29sb3I9IiMwMDAiIGZsb29kLW9wYWNpdHk9IjAuOCIvPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0idXJsKCNnMSkiIC8+CiAgPGNpcmNsZSBjeD0iODAwIiBjeT0iNDUwIiByPSIzMDAiIGZpbGw9InVybCgjZ2xvdykiIC8+CiAgPCEtLSBBYnN0cmFjdCBjYXIgc2lsaG91ZXR0ZSAtLT4KICA8cGF0aCBkPSJNIDIwMCA2MDAgUSA0MDAgNDAwIDYwMCAzNTAgUSA5MDAgMjgwIDExMDAgMzUwIFEgMTQwMCA0NTAgMTUwMCA2MDAgTCAxNTAwIDcwMCBMIDEwMCA3MDAgTCAxMDAgNjAwIFoiIGZpbGw9IiMwNTA1MDUiIGZpbHRlcj0idXJsKCNzaGFkb3cpIiAvPgogIDwhLS0gV2hlZWxzIC0tPgogIDxjaXJjbGUgY3g9IjQwMCIgY3k9IjY4MCIgcj0iNjAiIGZpbGw9IiMxMTEiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIxMCIgLz4KICA8Y2lyY2xlIGN4PSIxMjAwIiBjeT0iNjgwIiByPSI2MCIgZmlsbD0iIzExMSIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjEwIiAvPgogIDwhLS0gQ3liZXJwdW5rL1Rlc2xhIExpbmVzIC0tPgogIDxwYXRoIGQ9Ik0gMjAwIDY1MCBMIDQwMCA2NTAiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSI1IiAvPgogIDxwYXRoIGQ9Ik0gMTIwMCA2NTAgTCAxNDAwIDY1MCIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjUiIC8+CiAgPCEtLSBMaWdodCBiYXIgLS0+CiAgPHJlY3QgeD0iNDUwIiB5PSI0NjAiIHdpZHRoPSI3MDAiIGhlaWdodD0iNCIgZmlsbD0iI2U1MmUyZSIgb3BhY2l0eT0iMC44IiAvPgo8L3N2Zz4K" alt="Tesla Model X Banner">
-        <div class="relative z-10 p-6">
-            <h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4 shadow-xl">Model X Plaid 保養決策分析</h1>
-            <p class="text-lg bg-black/50 backdrop-blur-sm px-4 py-2 rounded-lg inline-block">過保後延長保養 ($150/月) 究竟值唔值？</p>
+    <!-- Hero Section with External Image (Wikimedia Stable Link) -->
+    <div class="relative w-full h-[420px] overflow-hidden">
+        <!-- Background Image -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tesla_Model_X_P100D_%2835989262764%29.jpg/1280px-Tesla_Model_X_P100D_%2835989262764%29.jpg" 
+             alt="Tesla Model X Background" 
+             class="absolute inset-0 w-full h-full object-cover opacity-60">
+        
+        <!-- Overlay Content -->
+        <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-transparent to-black/80">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4 drop-shadow-lg">Model X Plaid 保養決策分析</h1>
+            <p class="text-lg text-gray-200 font-medium bg-black/40 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
+                過保後延長保養 ($150/月) 究竟值唔值？
+            </p>
         </div>
-    </section>
+    </div>
 
-    <!-- Content Section -->
-    <div class="max-w-4xl mx-auto p-6 -mt-16 relative z-20">
-        <div class="bg-white text-black p-8 rounded-3xl shadow-2xl mb-12">
+    <!-- Main Content -->
+    <div class="max-w-4xl mx-auto px-4 py-8 -mt-20 relative z-20">
+        
+        <!-- Chart Card -->
+        <div class="bg-white text-black rounded-3xl shadow-2xl p-6 md:p-8 mb-8">
             <h2 class="text-2xl font-bold mb-6">成本效益深層分析</h2>
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                    <h3 class="font-bold mb-4">數據比較</h3>
-                    <canvas id="costChart" class="w-full"></canvas>
+                    <h3 class="font-bold text-gray-700 mb-4 text-sm uppercase tracking-widest">數據比較</h3>
+                    <canvas id="costChart"></canvas>
                 </div>
                 <div class="space-y-4">
                     <div class="border-l-4 border-black pl-4">
-                        <p class="text-sm text-gray-500">延保總成本 (5年)</p>
-                        <p class="text-xl font-bold">$9,000 USD</p>
+                        <p class="text-sm text-gray-500 font-bold uppercase tracking-widest">延保總成本 (5年)</p>
+                        <p class="text-4xl font-black">$9,000 USD</p>
                     </div>
-                    <p class="text-sm text-gray-700 leading-relaxed italic">
+                    <p class="text-sm text-gray-600 italic leading-relaxed">
                         每個月 $150 係買個「心安」。大佬，如果架車過 2022 年 Plaid 結構複雜，防護系統失效隨時維修過四千，九千蚊五年其實算買到個保險。
                     </p>
                 </div>
             </div>
         </div>
 
+        <!-- Info Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-20">
-            <div class="bg-zinc-900 p-8 rounded-3xl text-white">
+            <div class="bg-zinc-900 p-6 rounded-3xl border border-zinc-800">
                 <h3 class="text-lg font-bold mb-4">高開銷維修項目</h3>
-                <ul class="space-y-3 text-sm text-gray-300">
-                    <li>🔹 <strong>空氣懸掛系統:</strong> 最常見過保損壞，$2,500-$4,500</li>
-                    <li>🔹 <strong>Falcon Wing Doors:</strong> 複雜感應器及馬達，$1,500-$3,000</li>
-                    <li>🔹 <strong>MCU 電腦:</strong> 晶片過熱故障，$2,000+</li>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li class="flex items-start gap-2"><span class="text-red-500">🔹</span> <strong>空氣懸掛系統:</strong> 最常見過保損壞，$2,500-$4,500</li>
+                    <li class="flex items-start gap-2"><span class="text-red-500">🔹</span> <strong>Falcon Wing Doors:</strong> 感應器及馬達，$1,500-$3,000</li>
+                    <li class="flex items-start gap-2"><span class="text-red-500">🔹</span> <strong>MCU 電腦:</strong> 晶片過熱故障，$2,000+</li>
                 </ul>
             </div>
-            <div class="bg-zinc-900 p-8 rounded-3xl text-white">
+            <div class="bg-zinc-900 p-6 rounded-3xl border border-zinc-800">
                 <h3 class="text-lg font-bold mb-4">揸多五年總結</h3>
-                <ul class="space-y-3 text-sm text-gray-300">
+                <ul class="space-y-3 text-sm text-gray-400">
                     <li>• 折舊率始終係最大開支，延保對賣價幫助有限。</li>
                     <li>• 留 $5,000 做維修基金比俾 $9,000 買延保其實更靈活。</li>
                     <li>• 除非你打算長期持有唔賣車。</li>
@@ -92,8 +82,13 @@
                 datasets: [{
                     label: 'USD ($)',
                     data: [2500, 6000, 12000, 9000],
-                    backgroundColor: ['#d1d5db', '#9ca3af', '#4b5563', '#000000']
+                    backgroundColor: ['#d1d5db', '#9ca3af', '#4b5563', '#000000'],
+                    borderRadius: 4
                 }]
+            },
+            options: {
+                plugins: { legend: { display: false } },
+                scales: { y: { beginAtZero: true } }
             }
         });
     </script>
